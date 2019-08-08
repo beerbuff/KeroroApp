@@ -9,12 +9,13 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
+import { SMS } from '@ionic-native/sms/ngx';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,LoginPage
+    ListPage, LoginPage
 
   ],
   imports: [
@@ -25,12 +26,12 @@ import { LoginPage } from '../pages/login/login';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,LoginPage
+    ListPage, LoginPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SplashScreen, SMS,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
