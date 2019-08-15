@@ -10,12 +10,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { SMS } from '@ionic-native/sms/ngx';
+import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner'; //pages
+import { BarcodeScanner } from '@ionic-native/barcode-scanner'; //native
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage, LoginPage
+    ListPage, LoginPage, BarcodeScannerPage
 
   ],
   imports: [
@@ -26,11 +28,11 @@ import { SMS } from '@ionic-native/sms/ngx';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage, LoginPage
+    ListPage, LoginPage, BarcodeScannerPage
   ],
   providers: [
     StatusBar,
-    SplashScreen, SMS,
+    SplashScreen, SMS, BarcodeScanner,//native
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

@@ -1,3 +1,4 @@
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -7,6 +8,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { PhoneBookPage } from '../pages/phone-book/phone-book';
+import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +19,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any, icon: any}>;
+  pages: Array<{ title: string, component: any, icon: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -26,7 +29,9 @@ export class MyApp {
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'List', component: ListPage, icon: 'glasses' },
       { title: 'Login', component: LoginPage, icon: 'paw' },
-     
+      { title: 'Barcode', component: BarcodeScannerPage, icon: 'camera' },
+
+
     ];
 
   }
