@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ArrayJsonPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ArrayJson</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let myGame of gameArray">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="http://localhost/shop/img/{{myGame.game_img}}">
+      </ion-avatar>
+      <h2>Name : {{myGame.game_name}}</h2>
+      <p>Price : {{myGame.game_price}}</p>
+    </ion-item>
+    <img src="http://localhost/shop/img/{{myGame.game_img}}">
+    <ion-card-content>
+      <p>GameDetail : {{myGame.game_detail}}</p>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

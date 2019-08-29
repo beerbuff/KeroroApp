@@ -9,6 +9,10 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { PhoneBookPage } from '../pages/phone-book/phone-book';
 import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
+import { SimpleJsonPage } from '../pages/simple-json/simple-json';
+import { JsonMenuPage } from '../pages/json-menu/json-menu';
+import { PostJsonPage } from '../pages/post-json/post-json';
+import { ArrayJsonPage } from '../pages/array-json/array-json';
 
 
 @Component({
@@ -30,7 +34,10 @@ export class MyApp {
       { title: 'List', component: ListPage, icon: 'glasses' },
       { title: 'Login', component: LoginPage, icon: 'paw' },
       { title: 'Barcode', component: BarcodeScannerPage, icon: 'camera' },
-
+      { title: 'SimpleJson', component: SimpleJsonPage, icon: 'planet' },
+      { title: 'JsonMenu', component: JsonMenuPage, icon: 'pizza' },
+      { title: 'PostJson', component: PostJsonPage, icon: 'water' },
+      { title: 'ArrayJson', component: ArrayJsonPage, icon: 'flame' },
 
     ];
 
